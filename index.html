@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hassane Business Center – Téléphones et accessoires à Parakou</title>
+  <meta name="description" content="Hassane Business Center vend des téléphones et accessoires (iPhone, Samsung, Google Pixel et autres) à Parakou. Ouvert 24h/24, 7j/7.">
+  <link rel="icon" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Défilement horizontal des photos par marque */
+    .marques{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+    .marque-carte{background:#fff;border-radius:18px;padding:20px 0 16px;box-shadow:0 6px 20px rgba(0,0,0,.08);overflow:hidden}
+    .marque-carte h3{margin:0 20px 14px;font-size:1.3rem}
+    .defilant{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+    .defilant-piste{display:flex;gap:14px;width:max-content;animation:defilement var(--duree,25s) linear infinite}
+    .defilant:hover .defilant-piste{animation-play-state:paused}
+    .defilant-piste img{width:220px;height:260px;object-fit:cover;border-radius:12px;flex:none;background:#f1f1f1}
+    @keyframes defilement{to{transform:translateX(calc(-50% - 7px))}}
+    @media (prefers-reduced-motion:reduce){
+      .defilant{overflow-x:auto;-webkit-mask-image:none;mask-image:none}
+      .defilant-piste{animation:none}
+    }
+    @media (max-width:600px){.defilant-piste img{width:180px;height:220px}}
+
+    /* Services */
+    .services-liste{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+    .service{background:#fff;border-radius:18px;padding:24px;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+    .service h3{margin:0 0 10px;font-size:1.3rem}
+    .service p{margin:0 0 16px;line-height:1.5}
+
+    /* Avis clients */
+    .avis-liste{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+    .avis-liste:empty{display:none}
+    .avis{margin:0;background:#fff;border-radius:18px;padding:22px;box-shadow:0 6px 20px rgba(0,0,0,.08)}
+    .reco{display:inline-block;margin-bottom:12px;padding:4px 12px;border-radius:999px;background:#e7f6ec;color:#17803d;font-weight:800;font-size:.85rem}
+    .avis p{margin:0 0 12px;line-height:1.5}
+    .avis footer{font-weight:800}
+    .avis footer small{font-weight:400;opacity:.7}
+    .avis-actions{margin-top:24px}
+  </style>
+</head>
+<body>
+
+<header class="entete">
+  <div class="conteneur">
+    <a class="marque" href="#accueil">
+      <img src="logo.png" alt="Logo Hassane Business Center">
+      <span>Hassane<br>Business Center</span>
+    </a>
+    <ul class="menu">
+      <li><a href="#categories">Catégories</a></li>
+      <li><a href="#produits">Produits</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <a class="bouton bouton-plein" href="https://wa.me/22967872690">WhatsApp</a>
+  </div>
+</header>
+
+<main>
+  <section class="accueil" id="accueil">
+    <div class="conteneur">
+      <div>
+        <h1>Hassane Business Center <em>Téléphones &amp; accessoires</em></h1>
+        <p>iPhone, Samsung, Google Pixel et autres : retrouvez vos téléphones, coques, écouteurs et chargeurs à Parakou, à toute heure.</p>
+        <div class="actions">
+          <a class="bouton bouton-plein" href="https://wa.me/22967872690">Commander sur WhatsApp</a>
+          <a class="bouton bouton-vide" href="tel:+2290167872690">Appeler le centre</a>
+        </div>
+      </div>
+      <div class="sceau">
+        <img src="logo.png" alt="Logo Hassane Business Center" width="340" height="340">
+        <b>Ouvert 24h/24</b>
+      </div>
+    </div>
+  </section>
+
+  <div class="infos">
+    <div class="conteneur">
+      <ul>
+        <li>Ouvert tous les jours<small>24h/24, 7j/7</small></li>
+        <li>iPhone, Samsung, Google Pixel<small>et autres marques</small></li>
+        <li> Qtr:Albarika &amp; Tranza<small>Parakou, Bénin</small></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="defile" aria-hidden="true">
+    <div class="piste"><span>iPhone</span><span>Samsung</span><span>Redmi</span><span>Coques</span><span>Écouteurs</span><span>Chargeurs</span><span>Ouvert 24h/24</span><span>iPhone</span><span>Samsung</span><span>Redmi</span><span>Coques</span><span>Écouteurs</span><span>Chargeurs</span><span>Ouvert 24h/24</span></div>
+  </div>
+
+  <section class="section" id="categories">
+    <div class="conteneur">
+      <h2>Ce que vous trouvez chez nous</h2>
+      <p class="intro">Choisissez une catégorie, puis écrivez-nous sur WhatsApp pour connaître la disponibilité et le prix.</p>
+      <div class="grille">
+        <a class="categorie c1" href="https://wa.me/22967872690"><h3>Smartphones</h3><p>iPhone, Samsung, Redmi</p></a>
+        <a class="categorie c2" href="https://wa.me/22967872690"><h3>Coques et protections</h3><p>Pour chaque modèle</p></a>
+        <a class="categorie c3" href="https://wa.me/22967872690"><h3>Écouteurs</h3><p>Filaires et sans fil</p></a>
+        <a class="categorie c4" href="https://wa.me/22967872690"><h3>Chargeurs</h3><p>Câbles et chargeurs sans fil</p></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section fond-creme" id="produits">
+    <div class="conteneur">
+      <h2>Nos produits</h2>
+      <p class="intro">Découvrez nos modèles par marque. Écrivez-nous sur WhatsApp pour connaître la disponibilité et le prix.</p>
+      <div class="marques">
+
+        <!-- ===== iPhone : ajoutez une ligne <img> par photo ===== -->
+        <article class="marque-carte">
+          <h3>iPhone</h3>
+          <div class="defilant">
+            <div class="defilant-piste">
+              <img src="images/742332003_122188292312625487_955653526716235420_n.jpg" alt="iPhone">
+              <!-- <img src="images/NOUVELLE-PHOTO-IPHONE.jpg" alt="iPhone"> -->
+            </div>
+          </div>
+        </article>
+
+        <!-- ===== Samsung ===== -->
+        <article class="marque-carte">
+          <h3>Samsung</h3>
+          <div class="defilant">
+            <div class="defilant-piste">
+              <img src="images/758368041_122189974052625487_5163034567132995781_n.jpg" alt="Samsung A15">
+              <img src="images/745487684_122188389914625487_7070116405592918340_n.jpg" alt="Samsung A15">
+              <img src="images/752642861_122189527994625487_3788488823189758941_n.jpg" alt="Samsung A15">
+            </div>
+          </div>
+        </article>
+
+         <!-- ===== ===== -->
+        <article class="marque-carte">
+          <h3>Tablettes & Divers</h3>
+          <div class="defilant">
+            <div class="defilant-piste">
+              <img src="images/757523958_122190050678625487_5910318642341022289_n.jpg" alt="Tablettes & Divers">
+              <img src="images/770758898_122191289216625487_2893092822702590422_n.jpg" alt="Samsung A15">
+              <img src="images/752642861_122189527994625487_3788488823189758941_n.jpg" alt="Samsung A15">
+              <img src="images/745487684_122188389914625487_7070116405592918340_n.jpg" alt="Samsung A15">
+              <img src="images/754110248_122189614532625487_1330099428331013920_n.jpg" alt="Samsung A15">
+              <img src="images/813966167_122194567466625487_3547171202833367408_n.jpg" alt="Samsung A15">
+              <img src="images/752642861_122189527994625487_3788488823189758941_n.jpg" alt="Samsung A15">
+            </div>
+          </div>
+        </article>
+        <!-- ===== Redmi : ajoutez vos photos Redmi ici =====
+        <article class="marque-carte">
+          <h3>Redmi</h3>
+          <div class="defilant">
+            <div class="defilant-piste">
+              <img src="images/PHOTO-REDMI-1.jpg" alt="Redmi">
+              <img src="images/PHOTO-REDMI-2.jpg" alt="Redmi">
+            </div>
+          </div>
+        </article>
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="services">
+    <div class="conteneur">
+      <h2>Nos services</h2>
+      <p class="intro">Au-delà de la vente, nous prenons soin de votre téléphone.</p>
+      <div class="services-liste">
+        <article class="service">
+          <h3>🔧 Réparation</h3>
+          <p>Votre téléphone est en panne ou abîmé ? Apportez-le au centre ou écrivez-nous sur WhatsApp pour un diagnostic.</p>
+          <!-- À ADAPTER : listez ici les réparations que vous faites vraiment (écran, batterie, connecteur de charge, etc.) -->
+          <a class="bouton bouton-plein" href="https://wa.me/22967872690?text=Bonjour%2C%20j%27ai%20besoin%20d%27une%20r%C3%A9paration%20pour%20mon%20t%C3%A9l%C3%A9phone.">Demander une réparation</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="avis">
+    <div class="conteneur">
+      <h2>Avis de nos clients</h2>
+      <p class="intro">Ce que disent nos clients de Parakou. Vous avez acheté chez nous ? Donnez-nous votre avis.</p>
+
+      <div class="avis-liste">
+        <blockquote class="avis">
+          <span class="reco">👍 Recommande</span>
+          <p>« Boutique de confiance, passer payé vos téléphones portables à Parakou »</p>
+          <footer>Hamissou Art <small>· Recommandation Facebook, 6 octobre 2025</small></footer>
+        </blockquote>
+
+        <blockquote class="avis">
+          <span class="reco">👍 Recommande</span>
+          <p>« Je recommande vivement la page »</p>
+          <footer>Tchédrak Kiki <small>· Recommandation Facebook, 6 octobre 2025</small></footer>
+        </blockquote>
+
+        <blockquote class="avis">
+          <span class="reco">👍 Recommande</span>
+          <p>« Meilleur dans son domaine »</p>
+          <footer>Wandemeve Hontongnon Jean Bédié <small>· Recommandation Facebook, 5 octobre 2025</small></footer>
+        </blockquote>
+
+        <blockquote class="avis">
+          <span class="reco">👍 Recommande</span>
+          <p>« Abonnement 💪 guidjoooo. »</p>
+          <footer>Dieudonné Luc Baou <small>· Recommandation Facebook, 3 octobre 2025</small></footer>
+        </blockquote>
+
+        <!-- Pour ajouter un avis : copiez un bloc <blockquote class="avis"> ci-dessus et changez le texte et le nom. -->
+      </div>
+
+      <div class="actions avis-actions">
+        <a class="bouton bouton-plein" href="https://wa.me/22967872690?text=Bonjour%2C%20je%20souhaite%20laisser%20un%20avis%20sur%20Hassane%20Business%20Center.">Laisser un avis sur WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="conteneur">
+      <div>
+        <h2>Passez nous voir, ou écrivez-nous</h2>
+        <p class="intro">Le centre est ouvert tous les jours, jour et nuit. Pour savoir si un modèle est en stock, le plus rapide est un message WhatsApp.</p>
+      </div>
+      <div class="carte">
+        <h3>Hassane Business Center</h3>
+        <p>Albarika &amp; Tranza, Parakou, Bénin</p>
+        <p>Téléphone : <a href="tel:+2290167872690">+229 01 67 87 26 90</a></p>
+        <p>Téléphone : <a href="tel:+2290165072711">+229 01 65 07 27 11</a></p>
+        <p>Horaires : tous les jours, 24h/24</p>
+        <a class="bouton" href="https://wa.me/22967872690">Écrire sur WhatsApp</a>
+       
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="pied">
+  <ul class="reseaux">
+    <!-- À REMPLACER par le lien de la page Facebook du centre -->
+    <li><a class="rs rs-fb" href="https://www.facebook.com/share/r/1AHZbYu33E/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a></li>
+    <!-- À REMPLACER par le lien du compte TikTok du centre -->
+    <li><a class="rs rs-tk" href="https://www.tiktok.com/@hassanebusinesscenter?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.6 5.82A4.28 4.28 0 0 1 15.54 3h-3.09v12.4a2.59 2.59 0 0 1-2.59 2.5c-1.42 0-2.6-1.16-2.6-2.6 0-1.72 1.66-3.01 3.37-2.48V9.66c-3.45-.46-6.47 2.22-6.47 5.64 0 3.33 2.76 5.7 5.69 5.7 3.14 0 5.69-2.55 5.69-5.7V9.01a7.35 7.35 0 0 0 4.3 1.38V7.3s-1.88.09-3.24-1.48z"/></svg></a></li>
+    <li><a class="rs rs-wa" href="https://wa.me/22967872690" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.43 15.1L2 22l5.04-1.58A9.9 9.9 0 1 0 12.04 2zm5.8 14.1c-.25.7-1.45 1.34-2 1.4-.52.05-1 .24-3.38-.7-2.85-1.13-4.65-4.04-4.79-4.23-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.06.98-2.34.25-.28.55-.35.74-.35h.53c.17 0 .4-.06.62.48.23.55.78 1.9.85 2.04.07.14.11.3.02.49-.1.19-.14.3-.28.46-.14.17-.3.37-.43.5-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.91 1.06.94 1.95 1.23 2.23 1.37.28.14.44.12.6-.07.17-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.26.1 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.18 1.38z"/></svg></a></li>
+  </ul>
+  <p>© 2026 Hassane Business Center, Parakou, Bénin</p>
+</footer>
+
+<a class="flottant" href="https://wa.me/22967872690" target="_blank" rel="noopener" aria-label="Écrire sur WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2a9.9 9.9 0 0 0-8.43 15.1L2 22l5.04-1.58A9.9 9.9 0 1 0 12.04 2zm5.8 14.1c-.25.7-1.45 1.34-2 1.4-.52.05-1 .24-3.38-.7-2.85-1.13-4.65-4.04-4.79-4.23-.14-.19-1.14-1.52-1.14-2.9 0-1.38.72-2.06.98-2.34.25-.28.55-.35.74-.35h.53c.17 0 .4-.06.62.48.23.55.78 1.9.85 2.04.07.14.11.3.02.49-.1.19-.14.3-.28.46-.14.17-.3.37-.43.5-.14.14-.28.29-.12.57.16.28.72 1.18 1.54 1.91 1.06.94 1.95 1.23 2.23 1.37.28.14.44.12.6-.07.17-.19.7-.82.89-1.1.19-.28.37-.23.62-.14.26.1 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.18 1.38z"/></svg></a>
+
+<script>
+  // Duplique les photos de chaque marque pour un défilement continu, sans saut
+  document.querySelectorAll('.defilant-piste').forEach(function (piste) {
+    var originales = Array.from(piste.children);
+    var zone = piste.parentElement.clientWidth || 320;
+    var largeurImg = 234; // image + espace
+    // assure que la moitié de la piste est au moins aussi large que la zone visible
+    var copies = Math.max(1, Math.ceil(zone / (originales.length * largeurImg)));
+    var moitie = [];
+    for (var i = 0; i < copies; i++) originales.forEach(function (el) { moitie.push(el); });
+    piste.innerHTML = '';
+    moitie.forEach(function (el, k) { piste.appendChild(k < originales.length ? el : el.cloneNode(true)); });
+    var total = Array.from(piste.children);
+    total.forEach(function (el) { piste.appendChild(el.cloneNode(true)); });
+    piste.style.setProperty('--duree', (total.length * 5) + 's');
+  });
+</script>
+
+</body>
+</html>
